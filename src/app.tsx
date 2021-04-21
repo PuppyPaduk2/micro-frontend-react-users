@@ -1,5 +1,5 @@
 import { Button, Input, Space } from 'antd';
-import { useStateGlobal } from 'libs/hooks/use-state-global';
+import { useStateGlobal } from 'libs/use-state-global';
 import React, { FC } from 'react';
 
 export const App: FC = () => {
@@ -14,8 +14,8 @@ export const App: FC = () => {
 };
 
 const Form: FC = () => {
-  const [login, setLogin] = useStateGlobal("", "login");
-  const [pass, setPass] = useStateGlobal("", "password");
+  const [login, setLogin] = useStateGlobal("", "login", "auth/form");
+  const [pass, setPass] = useStateGlobal("", "password", "auth/form");
 
   return (
     <Space direction="vertical">
